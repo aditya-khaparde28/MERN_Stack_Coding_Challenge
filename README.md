@@ -17,23 +17,15 @@ Database: MongoDB for efficient data management.
 1.Clone the repository:
 git clone https://github.com/aditya-khaparde28/MERN_Stack_Coding_Challenge.git
 
-2.Navigate to the project directory
+2.Navigate to the project directory: cd MERN_Stack_Coding_Challenge
 
-cd MERN_Stack_Coding_Challenge
+3.Install dependencies: npm install
 
-3.Install dependencies:
-
-npm install
-
-4.Start the backend
-
-cd Backend
+4.Start the backend: cd Backend
 
 npx nodemon index.js
 
-5.Start the frontend
-
-cd ../Frontend
+5.Start the frontend: cd ../Frontend
 
 npm run dev
 
