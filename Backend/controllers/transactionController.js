@@ -177,6 +177,87 @@ const getBarChartData = async (req, res) => {
 
 module.exports = { getBarChartData };
 
+//Bar chart data api v1
+// const getBarChartData = async (req, res) => {
+//     const { month } = req.query;
+//     const start = new Date(`${month} 1`);
+//     const end = new Date(start);
+//     end.setMonth(end.getMonth() + 1);
+  
+//     try {
+//       const barChartData = await Transaction.aggregate([
+//         { $match: { dateOfSale: { $gte: start, $lt: end } } },
+//         {
+//           $bucket: {
+//             groupBy: "$price",
+//             boundaries: [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+//             default: "901-above",
+//             output: { count: { $sum: 1 } }
+//           }
+//         }
+//       ]);
+  
+//       res.status(200).json(barChartData);
+//     } catch (error) {
+//       res.status(500).send('Error fetching bar chart data.');
+//     }
+//   };
+//   module.exports = { getBarChartData };
+
+//new code v2
+// const getBarChartData = async (req, res) => {
+//     const { month, year } = req.query;
+  
+//     // Define months with their index values
+//     const months = {
+//       January: 0,
+//       February: 1,
+//       March: 2,
+//       April: 3,
+//       May: 4,
+//       June: 5,
+//       July: 6,
+//       August: 7,
+//       September: 8,
+//       October: 9,
+//       November: 10,
+//       December: 11,
+//     };
+  
+//     // Get the current year if no year is provided
+//     const selectedYear = year ? parseInt(year) : new Date().getFullYear();
+//     const start = new Date(selectedYear, months[month], 1);
+//     const end = new Date(selectedYear, months[month] + 1, 1);
+  
+//     console.log('Start Date:', start);
+//     console.log('End Date:', end);
+  
+//     try {
+//       const barChartData = await Transaction.aggregate([
+//         { $match: { dateOfSale: { $gte: start, $lt: end } } },
+//         {
+//           $bucket: {
+//             groupBy: "$price",
+//             boundaries: [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+//             default: "901-above",
+//             output: { count: { $sum: 1 } }
+//           }
+//         }
+//       ]);
+  
+//       console.log('Bar Chart Data:', barChartData);
+  
+//       res.status(200).json(barChartData);
+//     } catch (error) {
+//       console.error('Error fetching bar chart data:', error);
+//       res.status(500).send('Error fetching bar chart data.');
+//     }
+//   };
+  
+//   module.exports = { getBarChartData };
+  
+
+
 
 //Pie chart
 const getPieChartData = async (req, res) => {
