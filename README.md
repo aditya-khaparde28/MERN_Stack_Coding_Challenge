@@ -36,6 +36,9 @@ Frontend Screenshots🚀
 
 <img width="1470" alt="Screenshot 2024-08-22 at 8 43 04 PM" src="https://github.com/user-attachments/assets/0850c7c2-9c74-4724-bcb2-c908f16b90ae">
 
+<img width="1470" alt="Screenshot 2024-08-23 at 11 15 12 PM" src="https://github.com/user-attachments/assets/a0ff3ea5-8206-412b-9b9b-77ee57fd19af">
+
+
 
 
 
